@@ -294,6 +294,7 @@ for document_type in document_types:
         for key in dict:
             dict[key] = unidecode(dict[key])
             dict[key] = dict[key].replace('&', '\\&')
+            dict[key] = dict[key].replace('_', '\\_')
 
         db.entries.append(dict)
         # pp.pprint(dict)
