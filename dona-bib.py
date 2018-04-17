@@ -291,6 +291,10 @@ for document_type in document_types:
                 'institution': 'Wroclaw University of Science and Technology, Department of Electronics'
             })
 
+        for key in dict:
+            dict[key] = unidecode(dict[key])
+            dict[key] = dict[key].replace('&', '\\&')
+
         db.entries.append(dict)
         # pp.pprint(dict)
         # break
